@@ -2,9 +2,9 @@ import './App.css';
 import {useEffect} from 'react'
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import Skills from './components/Skills'
-import Honors from './components/Honors';
-import Certs from './components/Certs';
+import Skills from './components/Skills';
+import Projects from './components/Projects';
+import Portfolio from './components/Portfolio';
 import Footer from './components/Footer';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -20,8 +20,8 @@ function App() {
       <Navbar />
       <Hero />
       <Skills />
-      <Honors />
-      <Certs />
+      <Projects />
+      <Portfolio />
       <Footer />
     </div>
   );

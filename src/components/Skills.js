@@ -5,21 +5,22 @@ import SkillCard from "./SkillCard.js"
 
 import javascript from "../assets/skills/javascript.svg"
 import bash from "../assets/skills/bash.svg"
-import kvm from "../assets/skills/kvm.svg"
 import linux from "../assets/skills/linux.svg"
-import python from "../assets/skills/python.svg"
 import reactIcon from "../assets/skills/react.svg"
-import tailwind from "../assets/skills/tailwind.svg"
-import mikrotik from "../assets/skills/mikrotik.svg"
-import kubernetes from "../assets/skills/kubernetes.svg"
-import ansible from "../assets/skills/ansible.svg"
-import windows from "../assets/skills/windows.svg"
-import react from "../assets/skills/react.svg"
-import cisco from "../assets/skills/cisco.svg"
 import docker from "../assets/skills/docker.svg"
 import git from "../assets/skills/git.svg"
 import express from "../assets/skills/express.svg"
 import gitlab from "../assets/skills/gitlab.svg"
+import node from "../assets/skills/nodejs.svg"
+import html from "../assets/skills/html.svg"
+import github from "../assets/skills/github.svg"
+import csharp from "../assets/skills/csharp.svg"
+import unity from "../assets/skills/unity.svg"
+import scrum from "../assets/skills/scrum.svg"
+import postgres from "../assets/skills/postgres.svg"
+import mysql from "../assets/skills/mysql.svg"
+import uml from "../assets/skills/uml.svg"
+import cpp from "../assets/skills/cpp.svg"
 
 import hr from "../assets/curve-hr.svg"
 
@@ -28,34 +29,42 @@ export default function Skills() {
         dots: false,
         autoplay: true,
         infinite: true,
-        slidesToShow: 2,
-        slidesToScroll: 1
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        speed: 1000,
+        autoplaySpeed: 4000
       };
+
+    const today = new Date();
+    const skills = [
+        {name: "C#", years: today.getFullYear() - 2016, img: csharp},
+        {name: "Unity3D", years: today.getFullYear() - 2016, img: unity},
+        {name: "Linux", years: today.getFullYear() - 2019, img: linux},
+        {name: "Bash", years: today.getFullYear() - 2017, img: bash},
+        {name: "Javascript", years: today.getFullYear() - 2017, img: javascript},
+        {name: "React", years: today.getFullYear() - 2022, img: reactIcon},
+        {name: "Docker", years: today.getFullYear() - 2019, img: docker},
+        {name: "Git", years: today.getFullYear() - 2016, img: git},
+        {name: "ExpressJS", years: today.getFullYear() - 2019, img: express},
+        {name: "Gitlab", years: today.getFullYear() - 2018, img: gitlab},
+        {name: "NodeJS", years: today.getFullYear() - 2018, img: node},
+        {name: "HTML", years: today.getFullYear() - 2016, img: html},
+        {name: "Github", years: today.getFullYear() - 2016, img: github},
+        {name: "Scrum", years: today.getFullYear() - 2017, img: scrum},
+        {name: "MySQL", years: today.getFullYear() - 2017, img: mysql},
+        {name: "Postgres", years: today.getFullYear() - 2018, img: postgres},
+        {name: "UML", years: today.getFullYear() - 2018, img: uml},
+        {name: "C++", years: 0.5, img: cpp},
+    ].sort((a, b) => b.years - a.years);
 
     return (
         <div id="skills" className="mt-4 text-white">
-            <h1 className="text-2xl font-bold">Skills</h1>
+            <h2 className="text-2xl font-bold">Skills</h2>
             <p className="font-light text-gray-400">Here are some of my skills</p>
 
             <div className="mt-4">
                 <Slider {...settings}>
-                <SkillCard name="linux" experience="1 years" img={linux} />
-                <SkillCard name="bash" experience="1 years" img={bash} />
-                <SkillCard name="python" experience="1 years" img={python} />
-                <SkillCard name="javascript" experience="1 years" img={javascript} />
-                <SkillCard name="react" experience="1 years" img={reactIcon} />
-                <SkillCard name="tailwind" experience="1 years" img={tailwind} />
-                <SkillCard name="kvm" experience="1 years" img={kvm} />
-                <SkillCard name="mikrotik" experience="1 years" img={mikrotik} />
-                <SkillCard name="kubernetes" experience="1 years" img={kubernetes} />
-                <SkillCard name="ansible" experience="1 years" img={ansible} />
-                <SkillCard name="windows" experience="1 years" img={windows} />
-                <SkillCard name="react" experience="1 years" img={react} />
-                <SkillCard name="cisco" experience="1 years" img={cisco} />
-                <SkillCard name="docker" experience="1 years" img={docker} />
-                <SkillCard name="git" experience="1 years" img={git} />
-                <SkillCard name="express" experience="1 years" img={express} />
-                <SkillCard name="gitlab" experience="1 years" img={gitlab} />
+                    {skills.map(s => <SkillCard name={s.name} experience={`${s.years} years`} img={s.img} key={skills.indexOf(s)} />)}
                 </Slider>
             </div>
             <img src={hr} className="w-full mt-8 md:h-3" alt="hr" />

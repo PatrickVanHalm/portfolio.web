@@ -1,7 +1,7 @@
 import './App.css';
 import {useEffect} from 'react'
 import Navbar from './components/Navbar';
-import Hiro from './components/Hiro';
+import Hero from './components/Hero';
 import Skills from './components/Skills'
 import Honors from './components/Honors';
 import Certs from './components/Certs';
@@ -12,13 +12,13 @@ import 'aos/dist/aos.css';
 
 function App() {
     useEffect(() => {
-      document.title = 'Damasukma Trihanandi';
+      document.title = 'Patrick van Halm';
       AOS.init();
     }, []);
   return (
     <div className="px-6 lg:px-20 xl:px-36 bg-dark-500">
       <Navbar />
-      <Hiro />
+      <Hero />
       <Skills />
       <Honors />
       <Certs />

@@ -6,7 +6,7 @@ import {faCircleArrowRight, } from "@fortawesome/free-solid-svg-icons";
 import {  faGithub, faInstagram, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import hr from '../assets/curve-hr.svg'
 
-export default function Hiro () {
+export default function Hero () {
 
     const [loaded, setLoaded] = useState(true);
 

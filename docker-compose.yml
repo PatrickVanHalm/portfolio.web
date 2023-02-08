@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  www-portfolio:
+    build: ./
+    restart: unless-stopped
+
+networks:
+  default:
+    external: true
+    name: web

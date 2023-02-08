@@ -1,7 +1,7 @@
 FROM node:19-buster as BUILD
 LABEL stage=BUILD
 WORKDIR /build/
-COPY *.js *.mjs package.json /build/
+COPY . /build/
 RUN yarn install --prod=false
 RUN yarn build
 

@@ -32,7 +32,27 @@ export default function Skills() {
         slidesToShow: 4,
         slidesToScroll: 1,
         speed: 1000,
-        autoplaySpeed: 4000
+        autoplaySpeed: 4000,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 640,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
       };
 
     const today = new Date();

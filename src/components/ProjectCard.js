@@ -57,8 +57,8 @@ export default function ProjectCard(props){
             : null}
             <div className={`${props.media ? "mt-2" : ""} grow h-100 flex flex-col`}>
                 {props.tags ?
-                    <div className="flex flex-row mt-2 mb-1">
-                        {props.tags.map(tag => <span className="py-1 px-2 bg-dark-300 rounded-sm mr-2 shadow-sm">{tag}</span>)}
+                    <div className="flex flex-row mt-2 flex-wrap">
+                        {props.tags.map(tag => <span className="py-1 px-2 bg-dark-300 rounded-sm mr-2 mb-1 shadow-sm">{tag}</span>)}
                     </div>
                 : null}
                 <h2 className="font-bold md:text-xl">{props.name}</h2>

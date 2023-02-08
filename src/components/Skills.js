@@ -83,7 +83,7 @@ export default function Skills() {
             <h2 className="text-2xl font-bold">Skills</h2>
             <p className="font-light text-gray-400">Here are some of my skills</p>
 
-            <div className="mt-4">
+            <div className="mt-4 mx-5">
                 <Slider {...settings}>
                     {skills.map(s => <SkillCard name={s.name} experience={`${s.years} years`} img={s.img} key={skills.indexOf(s)} />)}
                 </Slider>

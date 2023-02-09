@@ -22,8 +22,8 @@ export default function ProjectCard(props){
                             return <img src={m.uri} alt={m.alt} className="w-full h-72 mx-auto object-cover"></img>
                         
                         case "youtube":
-                            return <iframe src={`https://www.youtube.com/embed/${m.videoId}`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen className="w-full h-72 mx-auto object-cover"></iframe>
-
+                            return <iframe src={`https://www.youtube.com/embed/${m.videoId}`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen" className="w-full h-72 mx-auto object-cover"></iframe>
+                            
                         default:
                             return "";
                     }

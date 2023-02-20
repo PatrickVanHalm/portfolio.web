@@ -28,7 +28,7 @@ jobs:
           token: ${{ secrets.ACCESS_TOKEN }}
 
       - name: Delete old files
-        run: rm -r /home/pi/Projects/websites/www/${{ github.event.repository.name }}
+        run: rm -r /home/pi/Projects/websites/www/${{ github.event.repository.name }} || true
 
       - name: Move to WWW
         run: mv $GITHUB_WORKSPACE/${{ github.event.repository.name }} /home/pi/Projects/websites/www/

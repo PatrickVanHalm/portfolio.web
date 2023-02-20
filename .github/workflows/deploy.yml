@@ -27,10 +27,13 @@ jobs:
         with:
           token: ${{ secrets.ACCESS_TOKEN }}
 
+      - name: Delete old files
+        run: rm -r /home/pi/Projects/websites/www/${{ github.event.repository.name }}
+
       - name: Move to WWW
-        run: mv $GITHUB_WORKSPACE/ /home/pi/Projects/websites/www/portfolio
+        run: mv $GITHUB_WORKSPACE/${{ github.event.repository.name }} /home/pi/Projects/websites/www/
 
       # Runs a set of commands using the runners shell
       - name: Docker compose build and deploy
-        working-directory: /home/pi/Projects/websites/www/portfolio
+        working-directory: /home/pi/Projects/websites/www/${{ github.event.repository.name }}
         run: docker-compose up --build -d

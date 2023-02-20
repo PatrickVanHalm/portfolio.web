@@ -31,7 +31,7 @@ jobs:
         run: rm -r /home/pi/Projects/websites/www/${{ github.event.repository.name }} || true
 
       - name: Copy to WWW
-        run: cp $GITHUB_WORKSPACE /home/pi/Projects/websites/www/
+        run: cp -r $GITHUB_WORKSPACE /home/pi/Projects/websites/www/
 
       # Runs a set of commands using the runners shell
       - name: Docker compose build and deploy

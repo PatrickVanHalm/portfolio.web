@@ -1,5 +1,6 @@
 import ProjectCard from "./ProjectCard.js"
-import { faGithub, faGlobe } from "@fortawesome/free-brands-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 import nexusModsIcon from "../assets/nexus.svg"
 import gamejoltIcon from "../assets/gamejolt.svg"
 

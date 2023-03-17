@@ -1,5 +1,5 @@
 import ProjectCard from "./ProjectCard.js"
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faGlobe } from "@fortawesome/free-brands-svg-icons";
 import nexusModsIcon from "../assets/nexus.svg"
 import gamejoltIcon from "../assets/gamejolt.svg"
 
@@ -23,6 +23,72 @@ import endlessImg1 from "../assets/project-images/endless-1.webp";
 
 export default function Projects(){
     const projects = [
+        {
+            name: "Aradesigns Creation",
+            buttons: [
+                {
+                    type: "icon",
+                    icon: faGlobe,
+                    uri:"https://creuse-active.nl/",
+                    title: "Page",
+                    text: "Webpage",
+                }
+            ],
+            date: new Date(2022, 11, 22),
+            description: "A webshop partially build and maintained by me.",
+            media: [
+                {
+                    type: "image",
+                    uri: "https://i.imgur.com/4xjwzZW.png"
+                }
+            ],
+            tags: ["PHP", "HTML", "CSS", "JS", "Wordpress"]
+        },
+        {
+            name: "Creuse Active",
+            buttons: [
+                {
+                    type: "icon",
+                    icon: faGlobe,
+                    uri:"https://creuse-active.nl/",
+                    title: "Page",
+                    text: "Webpage",
+                }
+            ],
+            date: new Date(2019, 6, 3),
+            description: "An affordable vacation website maintained by me.",
+            media: [
+                {
+                    type: "image",
+                    uri: "https://creuse-active.nl/wp-content/uploads/2018/11/LOGOwebsite-klein.png"
+                },
+                {
+                    type: "image",
+                    uri: "https://i.imgur.com/99cO5l3.png"
+                },
+                {
+                    type: "image",
+                    uri: "https://i.imgur.com/99cO5l3.png"
+                }
+            ],
+            tags: ["PHP", "HTML", "CSS", "JS", "Wordpress"]
+        },
+        {
+            name: "Fish Networking Lobby System",
+            buttons: [
+                {
+                    type: "icon",
+                    icon: faGithub,
+                    uri:"https://github.com/Patrick-van-Halm/FishNetworking-LobbySystem",
+                    title: "Source Code",
+                    text: "Source",
+                }
+            ],
+            date: new Date(2023, 1, 15),
+            description: "This is a system that is made to create lobbies and host separate game scenes for a max amount of players.",
+            media: [],
+            tags: ["C#", "Unity3D", "Fish Networking"]
+        },
         {
             name: "Derail Valley Multiplayer Mod",
             buttons: [

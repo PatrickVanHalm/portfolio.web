@@ -12,6 +12,7 @@ import scriptableEventsImg3 from "../assets/project-images/scriptable-object-eve
 
 import marioMafiaImg1 from "../assets/project-images/mario-mafia-1.gif";
 import theIronBarsImg1 from "../assets/project-images/the-iron-bars-1.gif";
+import buildingAttentionImg1 from "../assets/project-images/building_attention_1.gif";
 
 import roadOfAnarchyImg1 from "../assets/project-images/road-of-anarchy-1.png";
 
@@ -25,12 +26,37 @@ import endlessImg1 from "../assets/project-images/endless-1.webp";
 export default function Projects(){
     const projects = [
         {
+            name: "Building Attention",
+            buttons: [
+                {
+                    type: "icon",
+                    icon: faGithub,
+                    uri:"https://github.com/Patrick-van-Halm/building-attention",
+                    title: "Source Code",
+                    text: "Source",
+                }
+            ],
+            date: new Date(2023, 03, 14),
+            description: "An AR navigation app to navigate around the Fontys TQ 4.2.",
+            media: [
+                {
+                    type: "image",
+                    uri: buildingAttentionImg1
+                },
+                {
+                    type: "youtube",
+                    videoId: "QAgIGrXZP7A"
+                }
+            ],
+            tags: ["C#", "Unity", "AR Foundation"]
+        },
+        {
             name: "Aradesigns Creation",
             buttons: [
                 {
                     type: "icon",
                     icon: faGlobe,
-                    uri:"https://creuse-active.nl/",
+                    uri:"https://aradesignscreations.nl/",
                     title: "Page",
                     text: "Webpage",
                 }

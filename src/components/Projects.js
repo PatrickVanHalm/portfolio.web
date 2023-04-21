@@ -31,13 +31,13 @@ export default function Projects(){
                 {
                     type: "icon",
                     icon: faGithub,
-                    uri:"https://github.com/Patrick-van-Halm/building-attention",
+                    uri: "https://github.com/Patrick-van-Halm/building-attention",
                     title: "Source Code",
-                    text: "Source",
+                    text: "Source"
                 }
             ],
             date: new Date(2023, 03, 14),
-            description: "An AR navigation app to navigate around the Fontys TQ 4.2.",
+            description: "An AR navigation app to navigate around the Fontys TQ Building",
             media: [
                 {
                     type: "image",

@@ -36,7 +36,7 @@ export default function Projects(){
                     text: "Source"
                 }
             ],
-            date: new Date(2023, 03, 14),
+            date: new Date(2023, 3, 14),
             description: "An AR navigation app to navigate around the Fontys TQ Building",
             media: [
                 {

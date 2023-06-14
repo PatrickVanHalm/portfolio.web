@@ -1,4 +1,5 @@
 import Slider from 'react-slick';
+import YouTube from 'react-youtube';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function ProjectCard(props){
@@ -11,18 +12,27 @@ export default function ProjectCard(props){
         speed: 1000,
         fade: true,
       };
+    // <iframe src={`https://www.youtube.com/embed/${m.videoId}`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen" className=""></iframe>
 
+    pauseSlider() {
+        this.slider.slickPause();
+    }
+    
+    continueSlider() {
+        this.slider.slickPlay();
+    }
+    
     return (
         <div data-aos="fade-up" data-aos-duration="500" data-aos-offset="100" className="w-full h-full bg-dark-200 rounded-md py-4 px-4 relative flex flex-col">
             {props.media ?
-                <Slider {...settings}>
+                <Slider {...settings} ref={slider => (this.slider = slider)} afterChange={this.continueSlider}>
                 {props.media.map(m => {
                     switch(m.type){
                         case "image":
                             return <img src={m.uri} alt={m.alt} className="w-full h-72 mx-auto object-cover"></img>
                         
                         case "youtube":
-                            return <iframe src={`https://www.youtube.com/embed/${m.videoId}`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen" className="w-full h-72 mx-auto object-cover"></iframe>
+                            return <YouTube videoId={m.videoId} iframeClassName="w-full h-72 mx-auto object-cover" onPlay={this.pauseSlider} onEnd={this.continueSlider}>
                             
                         default:
                             return "";

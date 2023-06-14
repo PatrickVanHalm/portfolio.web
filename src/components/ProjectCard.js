@@ -12,8 +12,7 @@ export default function ProjectCard(props){
         speed: 1000,
         fade: true,
       };
-    // <iframe src={`https://www.youtube.com/embed/${m.videoId}`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen" className=""></iframe>
-
+    
     pauseSlider() {
         this.slider.slickPause();
     }

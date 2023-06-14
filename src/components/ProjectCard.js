@@ -13,11 +13,11 @@ export default function ProjectCard(props){
         fade: true,
       };
     
-    pauseSlider() {
+    const pauseSlider = () => {
         this.slider.slickPause();
     }
     
-    continueSlider() {
+    const continueSlider = () => {
         this.slider.slickPlay();
     }
     
@@ -31,7 +31,7 @@ export default function ProjectCard(props){
                             return <img src={m.uri} alt={m.alt} className="w-full h-72 mx-auto object-cover"></img>
                         
                         case "youtube":
-                            return <YouTube videoId={m.videoId} iframeClassName="w-full h-72 mx-auto object-cover" onPlay={this.pauseSlider} onEnd={this.continueSlider}>
+                            return <YouTube videoId={m.videoId} iframeClassName="w-full h-72 mx-auto object-cover" onPlay={this.pauseSlider} onEnd={this.continueSlider}/>
                             
                         default:
                             return "";

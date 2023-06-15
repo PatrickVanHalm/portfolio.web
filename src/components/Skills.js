@@ -56,26 +56,25 @@ export default function Skills() {
         ]
       };
 
-    const today = new Date();
     const skills = [
-        {name: "C#", years: today.getFullYear() - 2016, img: csharp},
-        {name: "Unity3D", years: today.getFullYear() - 2016, img: unity},
-        {name: "Linux", years: today.getFullYear() - 2019, img: linux},
-        {name: "Bash", years: today.getFullYear() - 2017, img: bash},
-        {name: "Javascript", years: today.getFullYear() - 2017, img: javascript},
-        {name: "React", years: today.getFullYear() - 2022, img: reactIcon},
-        {name: "Docker", years: today.getFullYear() - 2019, img: docker},
-        {name: "Git", years: today.getFullYear() - 2016, img: git},
-        {name: "ExpressJS", years: today.getFullYear() - 2019, img: express},
-        {name: "Gitlab", years: today.getFullYear() - 2018, img: gitlab},
-        {name: "NodeJS", years: today.getFullYear() - 2018, img: node},
-        {name: "HTML", years: today.getFullYear() - 2016, img: html},
-        {name: "Github", years: today.getFullYear() - 2016, img: github},
-        {name: "Scrum", years: today.getFullYear() - 2017, img: scrum},
-        {name: "MySQL", years: today.getFullYear() - 2017, img: mysql},
-        {name: "Postgres", years: today.getFullYear() - 2018, img: postgres},
-        {name: "UML", years: today.getFullYear() - 2018, img: uml},
-        {name: "C++", years: 0.5, img: cpp},
+        {name: "C#", years: 8, img: csharp},
+        {name: "Unity3D", years: 5, img: unity},
+        {name: "Linux", years: 5, img: linux},
+        {name: "Bash", years: 2, img: bash},
+        {name: "Javascript", years: 6, img: javascript},
+        {name: "React", years: 1, img: reactIcon},
+        {name: "Docker", years: 6, img: docker},
+        {name: "Git", years: 7, img: git},
+        {name: "ExpressJS", years: 4, img: express},
+        {name: "Gitlab", years: 7, img: gitlab},
+        {name: "NodeJS", years: 5, img: node},
+        {name: "HTML", years: 7, img: html},
+        {name: "Github", years: 7, img: github},
+        {name: "Scrum", years: 6, img: scrum},
+        {name: "MySQL", years: 7, img: mysql},
+        {name: "Postgres", years: 5, img: postgres},
+        {name: "UML", years: 5, img: uml},
+        {name: "C++", years: 1, img: cpp},
     ].sort((a, b) => b.years - a.years);
 
     return (

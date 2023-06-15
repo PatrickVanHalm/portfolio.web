@@ -21,10 +21,14 @@ export default function ProjectCard(props){
         this.slider.slickPlay();
     }
     
+    const continueSliderOnChange = (index) => {
+        this.continueSlider();
+    }
+    
     return (
         <div data-aos="fade-up" data-aos-duration="500" data-aos-offset="100" className="w-full h-full bg-dark-200 rounded-md py-4 px-4 relative flex flex-col">
             {props.media ?
-                <Slider {...settings} ref={slider => (this.slider = slider)} afterChange={this.continueSlider}>
+                <Slider {...settings} ref={slider => (this.slider = slider)} afterChange={this.continueSliderOnChange}>
                 {props.media.map(m => {
                     switch(m.type){
                         case "image":

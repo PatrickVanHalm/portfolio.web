@@ -6,7 +6,7 @@ export default function Portfolio(){
             <h2 className="text-2xl font-bold">Student Portfolio</h2>
             <p className="font-light text-gray-400">This is my student portfolio of a few semesters</p>
 
-            <iframe height="800px" src="https://portfolio.drieam.app/s/GuxUr36X/KpBY1xWbrhPmWmuUecf4EW15" title="Dream Portfolio" className="w-full rounded-md mt-4"/>
+            <iframe height="800px" src="https://portfolio.drieam.app/s/GuxUr36X/KpBY1xWbrhPmWmuUecf4EW15" title="Dream Portfolio" className="w-full rounded-md mt-4" referrerpolicy="no-referrer"/>
             <img src={hr} className="w-full mt-8 md:h-2" alt="hr" />
         </div>
     );

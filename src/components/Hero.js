@@ -10,6 +10,7 @@ export default function Hero () {
     const [loaded, setLoaded] = useState(true);
     const today = new Date();
     const birthday = new Date(2000, 5, 20);
+    console.log(birthday);
     return (
         <>
         {loaded ?
@@ -25,7 +26,7 @@ export default function Hero () {
                     <h1 className="text-2xl font-bold">Patrick van Halm</h1>
                     <p className="text-xl font-bold text-gray-300">Software and Game Developer</p>
                     <ul className="mt-1">
-                        <li>{today.getMonth() < birthday.getMonth() || (today.getMonth() === birthday.getMonth() && today.getDate < birthday.getDate()) ? today.getFullYear() - birthday.getFullYear() - 1 : today.getFullYear() - birthday.getFullYear()} Years old</li>
+                        <li>{today.getMonth() < birthday.getMonth() || (today.getMonth() === birthday.getMonth() && today.getDate() < birthday.getDate()) ? today.getFullYear() - birthday.getFullYear() - 1 : today.getFullYear() - birthday.getFullYear()} Years old</li>
                     </ul>
                     <p className="text-md font-light text-gray-400 ">I am a driven programmer that actively involves himself with conversations and discussions in order to work towards creative solutions.</p>
                 </div>

@@ -7,7 +7,7 @@ export default function Footer(){
         <li><a href="#home" className="hover:underline">About</a></li>
         <li><a href="#skills" className="hover:underline">Skills</a></li>
         <li><a href="#projects" className="hover:underline">Projects</a></li>
-        <li><a href="#portfolio" className="hover:underline">Student Portfolio</a></li>
+        <li><a href="https://portfolio.drieam.app/s/GuxUr36X/KpBY1xWbrhPmWmuUecf4EW15" className="hover:underline" target="_blank" rel="noreferrer">Student Portfolio</a></li>
       </ul>
 
       <img src={hr} className="mb-4 mt-4 w-full md:h-1 text-white bottom-0" alt="hr" />

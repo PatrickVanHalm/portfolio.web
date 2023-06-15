@@ -391,7 +391,7 @@ export default function Projects(){
             <div className="grid grid-cols-1 md:grid-cols-3 justify-center mt-4 gap-12">
                 {projects.map(p => <ProjectCard name={p.name} description={p.description} uri={p.uri} date={p.date.toDateString()} media={p.media} buttons={p.buttons} tags={p.tags} key={projects.indexOf(p)} />)}
             </div>
-            <img src={hr} className="w-full mt-8 md:h-3" alt="hr" />
+            <img src={hr} className="w-full mt-8 md:h-2" alt="hr" />
         </div>
     )
 }

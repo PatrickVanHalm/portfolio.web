@@ -23,17 +23,17 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4.1.1
         with:
           token: ${{ secrets.ACCESS_TOKEN }}
 
       - name: Delete old files
-        run: rm -r /home/pi/Projects/websites/www/${{ github.event.repository.name }} || true
+        run: rm -r /home/pi/Projects/websites/www/portfolio || true
 
       - name: Copy to WWW
-        run: cp -r $GITHUB_WORKSPACE /home/pi/Projects/websites/www/
+        run: cp -r $GITHUB_WORKSPACE /home/pi/Projects/websites/www/portfolio
 
       # Runs a set of commands using the runners shell
       - name: Docker compose build and deploy
-        working-directory: /home/pi/Projects/websites/www/${{ github.event.repository.name }}
-        run: docker-compose up --build -d
+        working-directory: /home/pi/Projects/websites/www/portfolio
+        run: docker compose up --build -d
